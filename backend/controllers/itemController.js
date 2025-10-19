@@ -1,7 +1,6 @@
-const Item = require('../models/itemModel');
+import Item from "../models/itemModel.js";
 
-// Add new item
-exports.addItem = async (req, res) => {
+export const addItem = async (req, res) => {
   try {
     const newItem = new Item(req.body);
     await newItem.save();
@@ -11,8 +10,7 @@ exports.addItem = async (req, res) => {
   }
 };
 
-// Get all items
-exports.getItems = async (req, res) => {
+export const getItems = async (req, res) => {
   try {
     const items = await Item.find();
     res.json(items);

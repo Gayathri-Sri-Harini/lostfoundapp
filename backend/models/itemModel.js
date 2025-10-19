@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const itemSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -7,7 +7,8 @@ const itemSchema = new mongoose.Schema({
   date: { type: Date, default: Date.now },
   location: String,
   contactInfo: String,
-  status: { type: String, enum: ['lost', 'found'], required: true }
+  status: { type: String, enum: ["lost", "found"], required: true }
 });
 
-module.exports = mongoose.model('Item', itemSchema);
+const Item = mongoose.model("Item", itemSchema);
+export default Item;
