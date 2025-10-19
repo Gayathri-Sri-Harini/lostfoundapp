@@ -1,0 +1,159 @@
+.home-container {
+  text-align: center;
+  padding: 30px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.home-title {
+  font-size: 2rem;
+  color: teal;
+  margin-bottom: 10px;
+}
+
+.home-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: teal;
+  box-shadow: 0 0 5px rgba(0, 128, 128, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.home-container {
+  padding: 40px;
+  background: #f8fafc;
+  min-height: 100vh;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.home-title {
+  text-align: center;
+  font-size: 2rem;
+  color: teal;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.search-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 10px 15px;
+  width: 250px;
+  border: 2px solid teal;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #008080;
+  box-shadow: 0 0 6px rgba(0, 128, 128, 0.3);
+}
+
+.filter-dropdown {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid teal;
+  background: white;
+  color: teal;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-dropdown:hover {
+  background: teal;
+  color: white;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.item-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 5px solid transparent;
+  box-shadow: 0 2px 10px rgba(0, 128, 128, 0.1);
+  transition: all 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.25);
+}
+
+.item-card.lost {
+  border-left-color: #ef4444;
+}
+
+.item-card.found {
+  border-left-color: #10b981;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.item-status {
+  color: teal;
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+.item-location,
+.item-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.no-items {
+  text-align: center;
+  color: #888;
+  margin-top: 40px;
+  font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

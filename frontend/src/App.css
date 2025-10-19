@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  font-family: Arial;
+  padding: 20px;
+}
+
+.form input, .form select {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  width: 250px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.item-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  width: 300px;
+  text-align: left;
+}
+input, select {
+  padding: 6px;
+  margin: 5px;
+}

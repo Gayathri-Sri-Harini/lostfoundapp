@@ -1,0 +1,250 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  padding: 20px;
+}
+
+.auth-card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.auth-card h2 {
+  color: teal;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  color: gray;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: teal;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: teal;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #008b8b;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.auth-footer a {
+  color: teal;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.message {
+  background-color: #e0f2f1;
+  color: teal;
+  border-left: 4px solid teal;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+/* AddItem.css - styles for Add Item page & form */
+.additem-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, rgba(235,246,255,0.6), rgba(255,255,255,0.8));
+  min-height: calc(100vh - 72px); /* adjust for navbar height */
+}
+
+.additem-card {
+  width: 100%;
+  max-width: 760px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(12, 44, 61, 0.08);
+  padding: 28px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.additem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(12, 44, 61, 0.12);
+}
+
+.additem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.additem-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: teal;
+}
+
+.additem-sub {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.form-row-full {
+  grid-column: 1 / -1;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #334;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input-field, .textarea-field, .select-field {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-field:focus, .textarea-field:focus, .select-field:focus {
+  outline: none;
+  border-color: teal;
+  box-shadow: 0 0 0 4px rgba(0,128,128,0.06);
+}
+
+.textarea-field {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.helper-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn-submit {
+  background: teal;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,128,128,0.12);
+}
+
+.btn-submit:hover { background: #007777; }
+
+.btn-cancel {
+  background: #f3f4f6;
+  color: #333;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.small-note {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Image preview */
+.image-preview {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.image-preview img {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e6eef3;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .additem-card { padding: 18px; }
+  .additem-title { font-size: 1.25rem; }
+}
+

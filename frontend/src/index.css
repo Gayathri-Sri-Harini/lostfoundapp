@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌙 General Page Style */
+body {
+  @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 font-sans;
+}
+
+/* 🧭 Navbar Styling */
+.navbar {
+  @apply flex justify-between items-center px-6 py-3 bg-white dark:bg-gray-800 shadow-md;
+}
+
+.navbar a {
+  @apply text-gray-700 dark:text-gray-200 hover:text-blue-500 mx-3 font-medium transition-colors;
+}
+
+/* 🌙 Dark Mode Toggle */
+.dark-toggle {
+  @apply cursor-pointer text-xl ml-4 hover:text-blue-500 transition-colors;
+}
+
+/* 🏠 Home Section */
+.home-container {
+  @apply text-center mt-8;
+}
+
+.home-title {
+  @apply text-3xl font-bold mb-3 text-blue-600 dark:text-blue-400;
+}
+
+.home-subtitle {
+  @apply text-gray-600 dark:text-gray-300 mb-6;
+}
+
+/* 🧾 Buttons */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-100 px-5 py-2 rounded-lg transition-all duration-300;
+}
+
+/* 📦 Item Cards */
+.item-card {
+  @apply bg-white dark:bg-gray-800 shadow-md rounded-xl p-5 m-3 text-left transition-transform transform hover:-translate-y-1 hover:shadow-lg;
+}
+
+.item-card h3 {
+  @apply text-lg font-semibold text-blue-600 dark:text-blue-400;
+}
+
+.item-card p {
+  @apply text-gray-700 dark:text-gray-300 mt-1;
+}
+
+/* 🧩 Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 640px) {
+  .navbar {
+    @apply flex-col space-y-2;
+  }
+
+  .navbar a {
+    @apply block;
+  }
+}
