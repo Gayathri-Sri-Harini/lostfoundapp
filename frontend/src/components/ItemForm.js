@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { API_URL } from '../api';
 import './ItemForm.css';
 
 function ItemForm({ onItemAdded }) {
@@ -18,7 +19,7 @@ function ItemForm({ onItemAdded }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/items', formData);
+      await axios.post(`${API_URL}/items`, formData);
       alert('✅ Item added successfully!');
       onItemAdded(); // refresh list
       setFormData({

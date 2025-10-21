@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_URL } from '../api';
 
 
 function ItemList() {
@@ -8,7 +9,7 @@ function ItemList() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/items')
+      .get(`${API_URL}/items`)
       .then((res) => setItems(res.data))
       .catch((err) => console.error('Error fetching items:', err));
   }, []);
