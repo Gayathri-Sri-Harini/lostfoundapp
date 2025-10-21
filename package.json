@@ -2,6 +2,6 @@
   "name": "lostfoundapp",
   "version": "1.0.0",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build && mv build ../"
+    "build": "cd frontend && npm install && npm run build && move build ../"
   }
 }
