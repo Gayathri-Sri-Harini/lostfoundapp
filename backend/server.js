@@ -33,7 +33,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "build")));
 
   // For any route not matching /api, serve index.html
-  app.get("*", (req, res) => {
+  app.use((req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
     res.sendFile(path.join(__dirname, "build", "index.html"));
   });
 }
