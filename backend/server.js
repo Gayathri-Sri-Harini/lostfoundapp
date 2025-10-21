@@ -24,22 +24,7 @@ import authRoutes from "./routes/authRoutes.js";
 app.use("/api/items", itemRoutes);
 app.use("/api/auth", authRoutes);
 
-// Static files (Production frontend)
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-if (process.env.NODE_ENV === "production") {
-  // Serve the React build folder
-  app.use(express.static(path.join(__dirname, "build")));
-
-  // For any route not matching /api, serve index.html
-  app.use((req, res, next) => {
-    if (req.path.startsWith('/api')) {
-      return next();
-    }
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-  });
-}
+// Note: Frontend is served separately on Render, so no static file serving needed here
 
 // Server listen
 const PORT = process.env.PORT || 5000;
