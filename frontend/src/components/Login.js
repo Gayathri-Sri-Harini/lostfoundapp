@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { API_URL } from "../api";
+import { login } from "../api";
 import "./Auth.css";
 
 function Login({ onLogin }) {
@@ -14,7 +13,7 @@ function Login({ onLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${API_URL}/auth/login`, formData);
+      const res = await login(formData);
       setMessage(res.data.message);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));

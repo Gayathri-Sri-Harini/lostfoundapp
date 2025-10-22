@@ -6,4 +6,6 @@ const router = express.Router();
 router.post("/", addItem);
 router.get("/", getItems);
 
+// Export the router
 export default router;
+

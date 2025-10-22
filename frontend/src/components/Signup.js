@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { API_URL } from "../api";
+import { signup } from "../api";
 import "./Auth.css";
 
 function Signup() {
@@ -14,7 +13,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${API_URL}/auth/signup`, formData);
+      const res = await signup(formData);
       setMessage(res.data.message);
     } catch (err) {
       setMessage(err.response?.data?.message || "Signup failed");
